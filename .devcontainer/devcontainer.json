@@ -1,0 +1,14 @@
+{
+    "name": "Airflow Environment",
+    "dockerFile": "Dockerfile",
+    "settings": {
+      "terminal.integrated.defaultProfile.linux": "bash"
+    },
+    "postCreateCommand": "airflow db init && airflow users create --username admin --firstname Admin --lastname User --role Admin --email admin@example.com",
+    "forwardPorts": [8080],
+    "extensions": [
+      "ms-python.python",
+      "ms-azuretools.vscode-docker"
+    ]
+  }
+  
